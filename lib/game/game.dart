@@ -1,5 +1,4 @@
 import 'package:flame/game.dart';
-import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
 import 'components/player.dart';
 import 'components/alien.dart';
@@ -70,11 +69,7 @@ class SpaceGame extends FlameGame {
     _createAliens(); // Cria a formação de aliens
   }
 
-  @override
-  void onGameResize(Vector2 size) {
-    super.onGameResize(size);
-    // Define o tamanho do jogo quando a tela é redimensionada
-  }
+
 
   // Manipula entrada de teclado
   void handleKey(LogicalKeyboardKey key, Function restartCallback) {

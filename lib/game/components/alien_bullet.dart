@@ -8,11 +8,4 @@ class AlienBullet extends RectangleComponent {
     this.position = position; // Posição inicial
     paint = Paint()..color = Color(0xFF00FF00); // Cor verde
   }
-
-  @override
-  void render(Canvas canvas) {
-
-    super.render(canvas); // Desenha a bala principal
-
-  }
 }

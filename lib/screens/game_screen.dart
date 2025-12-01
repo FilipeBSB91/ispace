@@ -51,17 +51,20 @@ class _GameScreenState extends State<GameScreen> {
       body: Stack(
         children: [
           // Widget para capturar entrada de teclado
+          // ignore: deprecated_member_use
           RawKeyboardListener(
             focusNode: focusNode,
             autofocus: true,
+            // ignore: deprecated_member_use
             onKey: (RawKeyEvent event) {
+              // ignore: deprecated_member_use
               if (event is RawKeyDownEvent) {
                 // Passa tecla pressionada para o jogo
                 game.handleKey(event.logicalKey, _restartGame);
               }
             },
             child: Center( // Centraliza o jogo na tela (NOVO)
-              child: Container( // Container com tamanho fixo (NOVO)
+              child: SizedBox( // Container com tamanho fixo (NOVO)
                 width: 800, // Largura fixa do jogo (deve corresponder ao gameWidth no SpaceGame)
                 height: 600, // Altura fixa do jogo (deve corresponder ao gameHeight no SpaceGame)
                 child: GameWidget( // Widget do Flame para renderizar o jogo
@@ -99,6 +102,7 @@ class _GameScreenState extends State<GameScreen> {
           // Overlay de Game Over
           if (game.gameOver)
             Container(
+              // ignore: deprecated_member_use
               color: Colors.black.withOpacity(0.8), // Fundo semi-transparente
               child: Center(
                 child: Column(
